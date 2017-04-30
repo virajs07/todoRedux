@@ -4,8 +4,7 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'source-map',
   entry: [
-    
-    './client/reduxstagram'
+    './client/App'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
@@ -30,7 +29,7 @@ module.exports = {
     // js
     {
       test: /\.js$/,
-      loaders: ['babel'],
+      loaders: ['babel-loader'],
       include: path.join(__dirname, 'client')
     },
     // CSS
