@@ -8,15 +8,17 @@
     "test": "NODE_ENV=production mocha './tests/**/*.spec.js' --compilers js:babel-core/register",
     "clean": "rimraf dist",
     "start": "node devServer.js",
-    "tunnel": "browser-sync start --proxy localhost:5000"
+    "tunnel": "browser-sync start --proxy localhost:5000",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://github.com/virajs07",
   "repository": {
     "type": "git",
     "url": "https://github.com/virajs07/todoRedux.git"
   },
   "author": "Viraj Sinha",
   "license": "MIT",
-  "homepage": "https://github.com/virajs07",
   "dependencies": {
     "babel-core": "^6.7.7",
     "babel-eslint": "^7.2.3",
@@ -54,6 +56,7 @@
   "devDependencies": {
     "expect": "^1.18.0",
     "expect-jsx": "^3.0.0",
+    "gh-pages": "^0.12.0",
     "mocha": "^3.3.0",
     "react-addons-test-utils": "^15.0.2"
   }
