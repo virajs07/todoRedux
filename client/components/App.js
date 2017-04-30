@@ -1,3 +1,20 @@
 import React from 'react';
-import {render},ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom';
+import AddTodo from '../containers/addTodo';
+import VisibileTodoList from '../containers/visibleTodoList';
+import Footer from './footer';
 
+class App extends React.Component{
+
+	render(){
+		return(
+			<div>
+				<AddTodo/>
+				<VisibileTodoList/>
+				<Footer/>
+			</div>
+		)
+	}
+}
+
+export default App;
